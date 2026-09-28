@@ -55,7 +55,7 @@ solvers
 SIMPLE
 {
     nNonOrthogonalCorrectors 3;
-    pRefCell    10;
+    pRefPoint  (-4 2 0.055);
     pRefValue   0;
 
     residualControl
