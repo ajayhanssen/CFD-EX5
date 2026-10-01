@@ -47,6 +47,65 @@ runTimeModifiable true;
 functions
 {
     #include "forces"
+    #include "forceCoeffs"
+    //#include "solverResiduals"
+//     forceCoeffs1 // Gives the dimensionless coefficients
+//     {
+//         // Mandatory entries
+//         type    forceCoeffs;
+//         libs    ("libforces.so");
+//         patches
+//         (
+//             donald
+//         );
+//         // Optional entries
+//         // Field names
+//         p   p;
+//         U   U;
+//         rho     rhoInf;
+//         // Indicates incompressible
+//         rhoInf  1;
+//         // Required when rho = rhoInf
+//         // Reference pressure [Pa]
+//         pRef    0;
+//         // Include porosity effects?
+//         porosity    no;
+//         // Store and write volume field representations of forces and moments
+//         writeFields yes;
+//         // Centre of rotation for moment calculations
+//         CofR    (0 0 0);
+//         // Lift direction
+//         liftDir (0 1 0);
+//         // Drag direction
+//         dragDir (1 0 0);
+//         // Pitch axis
+//         pitchAxis   (0 0 1);
+//         // Freestream velocity magnitude [m/s]
+//         magUInf 22.2222;
+//         // Reference length [m]
+//         lRef    1;
+//         // Reference area [m2]
+//         Aref    0.06;
+//     }
+//
+//     Forces // Gives the forces in Newton
+//     {
+//         type    forces;
+//         libs    ("libforces.so");
+//         writeControl    writeTime;
+//         patches
+//         (
+//             donald
+//         );
+//         p   p;
+//         U   U;
+//         rho rhoInf;
+//         rhoInf  1;
+//         CofR    (0 0 0);
+//         liftDir (0 1 0);
+//         dragDir (1 0 0);
+//         pitchAxis    (0 0 1);
+//     }
 }
 
 

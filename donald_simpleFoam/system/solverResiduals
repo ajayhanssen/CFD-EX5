@@ -6,25 +6,12 @@
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
 
-forceCoeffs
-{
-    type            forceCoeffs;
-    libs            (forces);
-    writeControl    timeStep;
-    writeInterval   1;
-    log             false;
-    patches         (donald);
-    rho             rhoInf;
-    rhoInf          1.204;
-    liftDir         (0 1 0);
-    dragDir         (1 0 0);
-    CofR            (0 0 0);
-    pitchAxis       (0 0 1);
-    magUInf         22.22222;
-    lRef            1;
-    //Aref            0.0945638;
-    Aref            0.055;
-}
+solverResiduals
+    {
+        type            residuals;
+        libs            ("libutilityFunctionObjects.so");
+        writeFields     (p U k epsilon);
+    }
 
 
 // ************************************************************************* //
